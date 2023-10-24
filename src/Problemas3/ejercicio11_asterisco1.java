@@ -1,20 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package Problemas3;
 
-/**
- *
- * @author Flavia
- */
-public class ejercicio11_asterisco1 {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+public class ejercicio11_asterisco1 {
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner scanner = new Scanner(System.in);
+
+        int N = scanner.nextInt();
+
+        int M = scanner.nextInt();
+
+        if (N < 1 || N > 100 || M < 1 || M > 100) {
+            System.out.println("Los valores de N y M deben estar en el rango 1-100.");
+            return;
+        }
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
-    
 }
