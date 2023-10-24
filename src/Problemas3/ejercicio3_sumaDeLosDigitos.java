@@ -3,6 +3,7 @@ package Problemas3;
 import java.util.Scanner;
 
 public class ejercicio3_sumaDeLosDigitos {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
