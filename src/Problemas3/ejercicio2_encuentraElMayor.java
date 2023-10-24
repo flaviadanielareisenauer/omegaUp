@@ -1,20 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package Problemas3;
 
-/**
- *
- * @author Flavia
- */
-public class ejercicio2_encuentraElMayor {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+public class ejercicio2_encuentraElMayor {   
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+
+        if (n <= 0) {
+            System.out.println("Por favor, ingrese un valor válido para N.");
+            return;
+        }
+
+        int mayor = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            int numero = scanner.nextInt();
+
+            if (numero > mayor) {
+                mayor = numero;
+            }
+        }
+
+        System.out.println(mayor);
+
+        scanner.close();
     }
-    
 }
