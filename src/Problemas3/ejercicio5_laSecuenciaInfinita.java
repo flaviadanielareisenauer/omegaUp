@@ -1,20 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package Problemas3;
 
-/**
- *
- * @author Flavia
- */
-public class ejercicio5_laSecuenciaInfinita {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+public class ejercicio5_laSecuenciaInfinita {
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner scanner = new Scanner(System.in);
+
+        int N = scanner.nextInt();
+
+        imprimirSecuencia(N);
     }
-    
+
+    private static void imprimirSecuencia(int N) {
+        int numeroActual = 1;
+        boolean incrementando = true;
+
+        for (int i = 0; i < N; i++) {
+            System.out.print(numeroActual + " ");
+
+            if (incrementando) {
+                numeroActual++;
+            } else {
+                numeroActual--;
+            }
+
+            if (numeroActual == 5) {
+                incrementando = false;
+            } else if (numeroActual == 1) {
+                incrementando = true;
+            }
+        }
+    }
 }
