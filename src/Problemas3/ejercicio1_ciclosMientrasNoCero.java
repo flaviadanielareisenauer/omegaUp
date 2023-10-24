@@ -16,6 +16,7 @@ public class ejercicio1_ciclosMientrasNoCero {
             if (numero == 0) {
                 break;
             }
+
             suma += numero;
         }
 
