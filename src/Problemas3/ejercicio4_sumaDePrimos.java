@@ -11,7 +11,7 @@ public class ejercicio4_sumaDePrimos {
             int[] primos = encontrarSumaDosPrimos(n);
             System.out.println(primos[0] + " " + primos[1]);
         } else {
-			System.out.println(n + " 0");
+            System.out.println(n + " 0");
         }
 
         scanner.close();
