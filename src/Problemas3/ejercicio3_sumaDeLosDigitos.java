@@ -1,20 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package Problemas3;
 
-/**
- *
- * @author Flavia
- */
-public class ejercicio3_sumaDeLosDigitos {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+public class ejercicio3_sumaDeLosDigitos {
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+
+        if (n <= 0) {
+            System.out.println("Por favor, ingrese un entero positivo.");
+        } else {
+            int suma = sumaDigitos(n);
+            System.out.println(suma);
+        }
+
+        scanner.close();
     }
-    
+
+    public static int sumaDigitos(int numero) {
+        if (numero < 10) {
+            return numero;
+        } else {
+            return numero % 10 + sumaDigitos(numero / 10);
+        }
+    }
 }
