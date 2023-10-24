@@ -1,20 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package Problemas3;
 
-/**
- *
- * @author Flavia
- */
-public class ejercicio7_practicandoCiclos {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+public class ejercicio7_practicandoCiclos {
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner scanner = new Scanner(System.in);
+
+        int N = scanner.nextInt();
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
+
+        while (N < 1000) {
+            if (N % 2 == 0) {
+                N += sumarEnteros(1, A);
+            } else {
+                N += sumarEnteros(1, B);
+            }
+        }
+
+        System.out.println(N);
+
+        scanner.close();
     }
-    
+
+    private static int sumarEnteros(int inicio, int fin) {
+        int suma = 0;
+        for (int i = inicio; i <= fin; i++) {
+            suma += i;
+        }
+        return suma;
+    }
 }
