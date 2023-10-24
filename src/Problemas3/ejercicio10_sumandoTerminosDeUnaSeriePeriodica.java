@@ -1,20 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package Problemas3;
 
-/**
- *
- * @author Flavia
- */
-public class ejercicio10_sumandoTerminosDeUnaSeriePeriodica {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+public class ejercicio10_sumandoTerminosDeUnaSeriePeriodica {
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+
+        int ciclosCompletos = N / 3;
+        int sumaCiclosCompletos = ciclosCompletos * (1 + 2 + 3);
+
+        int terminosRestantes = N % 3;
+        int sumaRestantes = 0;
+        for (int i = 1; i <= terminosRestantes; i++) {
+            sumaRestantes += i;
+        }
+
+        int sumaTotal = sumaCiclosCompletos + sumaRestantes;
+        System.out.println(  sumaTotal);
     }
-    
 }
