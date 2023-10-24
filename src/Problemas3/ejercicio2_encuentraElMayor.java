@@ -2,7 +2,7 @@ package Problemas3;
 
 import java.util.Scanner;
 
-public class ejercicio2_encuentraElMayor {   
+public class ejercicio2_encuentraElMayor {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
